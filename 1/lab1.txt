@@ -1,0 +1,42 @@
+Load a sample dataset.
+
+mongodb+srv://rania:<*******>@cluster0.aoicnar.mongodb.net/?retryWrites=true&w=majority
+----------------------------------------------
+
+Explore databases and collections.
+
+show dbs
+
+
+---------------------------
+list of collections
+
+use sample_training
+
+show collections
+--------------------------
+Execute find queries using query operators ($ne, $eq, $gt, $regex, etc) and projection.
+
+1-find() method////i put what i need find after find like--db.score.find();
+---------------------------
+2-$ne Operator:
+db.grades.countDocuments({class_id:{$ne : 285}},{});
+---------------------
+3-$eq Operator:
+db.grades.countDocuments({class_id:{$eq : 285}},{});
+--------------------
+4-$gt Operator:
+-$gt Operator:
+db.grades.countDocuments({class_id:{$gt : 285}},{});
+---------------------
+ Insert arrays and arrays of nested documents.	
+1-insertOne:
+db.grades.find({student_id :10001})
+-------------
+2-insert array via update:
+db.grades.updateOne({student_id :10001} ,{$set : { score :"exclent"}});
+----------------
+Execute find queries on arrays and arrays of nested documents using $elemMatch, $all and $size.
+1-$elemMatch
+
+2-$all
